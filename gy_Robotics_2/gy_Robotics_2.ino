@@ -94,5 +94,5 @@ void loop() {
   pot_read();
   angle_kontrol();
   servo_kontrol();
-  delay(100);
+  delay(500);
 }
