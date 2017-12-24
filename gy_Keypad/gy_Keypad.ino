@@ -1,5 +1,9 @@
 /*
 gungor 4x4 KeyPad kullanımı
+https://github.com/GungorYalcin/ArduinoDersleri/tree/master/Fritzing/KeyPad
+https://github.com/GungorYalcin/ArduinoDersleri/tree/master/Library/KeyPad
+keypad.zip kütüphane olarak eklemeniz gerekiyor
+
 */
 #include <Keypad.h>
 const byte satir = 4;
