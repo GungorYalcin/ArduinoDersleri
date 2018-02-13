@@ -4,10 +4,10 @@
  */
 #include <Servo.h>
 const byte Led_pin = 3;  
-const byte s0_pin = 4;
-const byte s1_pin = 5;
-const byte s2_pin = 6;
-const byte s3_pin = 7;
+const byte s0_pin = 5;
+const byte s1_pin = 4;
+const byte s2_pin = 7;
+const byte s3_pin = 6;
 const byte sensorout_pin = 8; 
 const byte SG90_a_pin = 9;
 const byte SG90_b_pin = 10;
@@ -76,9 +76,9 @@ void color_read()
   Blue_color = pulseIn(sensorout_pin,LOW);
   delay(100);
   digitalWrite(Led_pin,LOW);
-  if (Red_color <0) && (Red_color >254 ) { Red_color = 0; }
-  if (Green_color <0)&& (Green_color >254 ) { Green_color = 0; }
-  if (Blue_color <0) && (Blue_color >254 ) { Blue_color = 0; }
+  if ((Red_color <0) && (Red_color >254 )) { Red_color = 0; }
+  if ((Green_color <0)&& (Green_color >254) ) { Green_color = 0; }
+  if ((Blue_color <0) && (Blue_color >254) ) { Blue_color = 0; }
 
   Serial.print("R:");
   Serial.print(Red_color);
@@ -89,20 +89,20 @@ void color_read()
 }
 
 void loop() {
-  sg90_a.write(sg90_a_acilari[0]);
+  sg90_a.write(sg90_a_aci[0]);
   delay(100);
-  sg90_a.write(sg90_a_acilari[1]);
+  sg90_a.write(sg90_a_aci[1]);
   delay(100);
   color_read();
   
-  if (Red_color > 0) && (Green_color > 0) && (Blue_color > 0)
+  if ( (Red_color > 0) && (Green_color > 0) && (Blue_color > 0) )
   {
     buldu = false;
     for (int i =0; i<maxSepet-1; i++)
     {
-      if (sepet[i][0] => Red_color - renk_tolarans ) &&  (sepet[i][0] =< Red_color + renk_tolarans ) // +-2 
-         (sepet[i][1] => Green_color - renk_tolarans ) &&  (sepet[i][1] =< Green_color + renk_tolarans )
-         (sepet[i][2] => Blue_color - -renk_tolarans ) && (sepet[i][2] =< Blue_color + renk_tolarans )
+      if ( (sepet[i][0] => Red_color - renk_tolarans ) &&  (sepet[i][0] =< Red_color + renk_tolarans ) 
+          (sepet[i][1] => Green_color - renk_tolarans ) &&  (sepet[i][1] =< Green_color + renk_tolarans )
+          (sepet[i][2] => Blue_color - -renk_tolarans ) && (sepet[i][2] =< Blue_color + renk_tolarans ) )
       {
         buldu = true;
         sg90_b.write( sg90_b_aci[i]); 
@@ -111,7 +111,7 @@ void loop() {
         break;
       }
       else
-      if (sepet[i][0] == 0 ) && (sepet[i][0] == 0 ) && (sepet[i][0] == 0 )
+      if ( (sepet[i][0] == 0 ) && (sepet[i][0] == 0 ) && (sepet[i][0] == 0 ) )
       { // yeni bir renk geldi
         buldu = true;
         sg90_b.write( sg90_b_aci[i]); 
