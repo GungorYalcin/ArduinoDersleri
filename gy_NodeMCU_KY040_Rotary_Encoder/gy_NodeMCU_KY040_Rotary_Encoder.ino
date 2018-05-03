@@ -67,9 +67,9 @@ void myTimerEvent()
 
 void setup()
 {
-   pinMode(PinCLK,INPUT);
-   pinMode(PinDT,INPUT);  
-   pinMode(PinSW,INPUT);
+   pinMode(PinCLK,INPUT_PULLUP);
+   pinMode(PinDT,INPUT_PULLUP);  
+   pinMode(PinSW,INPUT_PULLUP);
    sondurum = digitalRead(PinCLK);
    
   // Debug console
@@ -95,10 +95,15 @@ void loop()
     }
     Serial.print("Sayac:");
     Serial.println(sayac);
+    Serial.println(digitalRead(PinCLK));
+    Serial.println(digitalRead(PinDT));
     Blynk.virtualWrite(V5, sayac);
   }
   sondurum = durum;
-
+  Serial.print("PinCLK:");
+  Serial.print(digitalRead(PinCLK));
+  Serial.print(" PinDT:");
+  Serial.println(digitalRead(PinDT));
   Blynk.run();
  timer.run(); // Initiates BlynkTimer  
 }
