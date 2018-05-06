@@ -44,14 +44,14 @@
 
 // You should get Auth Token in the Blynk App.
 // Go to the Project Settings (nut icon).
-char auth[] = "f8ec173f73e54bd0ba377adacc8eceb3";
+char auth[] = "YourAuthToken";
 
 // Your WiFi credentials.
 // Set password to "" for open networks.
-char ssid[] = "lavender";
-char pass[] = "5393789681";
-Servo servo;
+char ssid[] = "YourNetworkName";
+char pass[] = "YourPassword";
 
+Servo servo;
 BLYNK_WRITE(V3)
 {
   servo.write(param.asInt());
