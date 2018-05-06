@@ -51,7 +51,6 @@ char auth[] = "134e85aa43f74efca573cb9e106ca61a";
 char ssid[] = "lavender";
 char pass[] = "5393789681";
 Servo servo;
-const int SG90_pin = 4;
 
 BLYNK_WRITE(V3)
 {
@@ -65,7 +64,7 @@ void setup()
   Serial.begin(9600);
 
   Blynk.begin(auth, ssid, pass);
-  servo.attach(SG90_pin);  
+  servo.attach(D4);  
 }
 
 void loop()
