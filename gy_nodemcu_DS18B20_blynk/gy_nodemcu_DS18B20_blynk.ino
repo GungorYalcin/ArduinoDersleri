@@ -11,7 +11,7 @@ OneWire oneWire(D2); // digital D2 pin
 DallasTemperature sensors(&oneWire);
 BlynkTimer timer;
 // You should get Auth Token in the Blynk App.
-char auth[] = "ceecb258c5ef4db085dbb24393eaxxx";
+char auth[] = "832278772de84cf1be73124786271XXXX";
 // Your WiFi credentials.
 char ssid[] = "YourNetworkName";
 char pass[] = "YourPassword";
@@ -41,18 +41,18 @@ void loop()
 {
   Blynk.run();
   timer.run();
- /* 
+  
  if ( (temp > 30 ) && (millis() > SonMesaj+3000 ) )
  {
   SonMesaj = millis();
   Blynk.notify(String("Uyari ")+temp + String("C"));
  }
- */
- /*
+ 
+ 
  if ( (temp > 30 ) && (millis() > SonEMail+3000 ) )
  {
   SonEMail = millis();
-  Blynk.email("xx8@Gmail.com","Blynk Deneme",String("Uyari ")+temp + String("C"));
+  Blynk.email("gungoryalcin68@Gmail.com","Blynk Deneme",String("Uyari ")+temp + String("C"));
  }
-*/
+
 }
