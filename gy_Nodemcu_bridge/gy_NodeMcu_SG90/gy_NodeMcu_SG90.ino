@@ -36,6 +36,7 @@ void blynkAnotherDevice() // Here we will send HIGH or LOW once per second
   if (ServoAci>90)
   {
     bridge1.digitalWrite(D1, LOW); 
+    bridge1.virtualWrite(V5, ServoAci);
   }
 }
 void setup()
