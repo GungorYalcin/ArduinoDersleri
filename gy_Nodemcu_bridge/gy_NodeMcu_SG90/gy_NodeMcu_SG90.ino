@@ -9,12 +9,12 @@
 
 // You should get Auth Token in the Blynk App.
 // Go to the Project Settings (nut icon).
-char auth[] = "23c6d34a767f42059f4ade1ca7a96fa3";
+char auth[] = "2f4b091ac4f14158b49efb1e37ebcdcd";
 
 // Your WiFi credentials.
 // Set password to "" for open networks.
-char ssid[] = "lavender";
-char pass[] = "5393789681";
+char ssid[] = "Lavender";
+char pass[] = "5335921602";
 
 
 int ServoAci = 0;
@@ -29,7 +29,7 @@ BLYNK_WRITE(V1)
 }
 
 BLYNK_CONNECTED() {
-  bridge1.setAuthToken("91e0da2abb3f4d2d879500979527bcc9"); // Place the AuthToken of the second hardware here
+  bridge1.setAuthToken("6a0dbceb342d4d2797a87ac656bb6ad0"); // Place the AuthToken of the second hardware here
 }
 void blynkAnotherDevice() // Here we will send HIGH or LOW once per second
 {
