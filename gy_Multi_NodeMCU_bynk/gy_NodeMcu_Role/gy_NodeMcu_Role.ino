@@ -8,7 +8,7 @@
 
 // You should get Auth Token in the Blynk App.
 // Go to the Project Settings (nut icon).
-char auth[] = "YourAuthToken";
+char auth[] = "yourToken";
 
 // Your WiFi credentials.
 // Set password to "" for open networks.
@@ -21,7 +21,7 @@ void setup()
   Serial.begin(115200);
   pinMode(D1,OUTPUT); //GPIO5
   pinMode(D2,OUTPUT); //GPIO4
-  pinMode(D3,OUTPUT); //GPIO3
+  pinMode(D3,OUTPUT); //GPIO0
   pinMode(D4,OUTPUT); //GPIO2
   digitalWrite(D1,HIGH);
   digitalWrite(D2,HIGH);

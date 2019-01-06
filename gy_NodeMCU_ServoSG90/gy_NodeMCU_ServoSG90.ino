@@ -65,11 +65,10 @@ void setup()
   Serial.begin(9600);
 
   Blynk.begin(auth, ssid, pass);
-  servo.attach(D4);  
+  servo.attach(D1);  
 }
 
 void loop()
 {
   Blynk.run();
 }
-
