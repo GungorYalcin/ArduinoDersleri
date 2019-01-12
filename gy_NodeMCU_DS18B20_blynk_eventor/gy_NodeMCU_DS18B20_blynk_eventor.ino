@@ -11,10 +11,10 @@ OneWire oneWire(D2); // digital D2 pin
 DallasTemperature sensors(&oneWire);
 BlynkTimer timer;
 // You should get Auth Token in the Blynk App.
-char auth[] = "ec1f2bcbcb9d4bc0a52bc4bfce1acc49";
+char auth[] = "YourToken";
 // Your WiFi credentials.
-char ssid[] = "Lavender";
-char pass[] = "5335921602";
+char ssid[] = "YourNetworkName";
+char pass[] = "YourPassword";
 
 float  temp = 0;
 
