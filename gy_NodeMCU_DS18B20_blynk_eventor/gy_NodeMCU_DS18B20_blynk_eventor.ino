@@ -1,5 +1,5 @@
 /*
- * gungor 01/01/2019
+ * gungor 12/01/2019
 */
 #define BLYNK_PRINT Serial
 #include <ESP8266WiFi.h>
@@ -11,14 +11,12 @@ OneWire oneWire(D2); // digital D2 pin
 DallasTemperature sensors(&oneWire);
 BlynkTimer timer;
 // You should get Auth Token in the Blynk App.
-char auth[] = "YourToken";
+char auth[] = "ec1f2bcbcb9d4bc0a52bc4bfce1acc49";
 // Your WiFi credentials.
-char ssid[] = "YourNetworkName";
-char pass[] = "YourPassword";
+char ssid[] = "Lavender";
+char pass[] = "5335921602";
 
 float  temp = 0;
-float SonMesaj = 0;
-float SonEMail = 0;
 
 void setup()
 {
@@ -41,18 +39,4 @@ void loop()
 {
   Blynk.run();
   timer.run();
-  
- if ( (temp > 30 ) && (millis() > SonMesaj+3000 ) )
- {
-  SonMesaj = millis();
-  Blynk.notify(String("Uyari ")+temp + String("C"));
- }
- 
- 
- if ( (temp > 30 ) && (millis() > SonEMail+3000 ) )
- {
-  SonEMail = millis();
-  Blynk.email("gungoryalcin68@Gmail.com","Blynk Deneme",String("Uyari ")+temp + String("C"));
- }
-
 }
