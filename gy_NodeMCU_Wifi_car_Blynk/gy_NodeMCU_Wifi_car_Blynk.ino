@@ -12,13 +12,13 @@ char ssid[] = "Lavender"; //YourNetworkName
 char pass[] = "5335921602"; //YourPassword
 BlynkTimer timer;
 
-const byte L298N_A_pin = D1; 
-const byte L298N_A_In1_pin = D2; 
-const byte L298N_A_In2_pin = D3; 
+const byte L298N_A_pin = D1; // GPI05
+const byte L298N_A_In1_pin = D2; //GPI04
+const byte L298N_A_In2_pin = D3; //GPI0
 
-const byte L298N_B_In3_pin = D4; 
-const byte L298N_B_In4_pin = D5; 
-const byte L298N_B_pin = D6; 
+const byte L298N_B_In3_pin = D4; // GPI02
+const byte L298N_B_In4_pin = D5; // GPIO14
+const byte L298N_B_pin = D6; //GPI12
 
 const byte Led1_pin =  D7; //GPIO13  // Sol Sinyal
 const byte Led2_pin =  D8; //GPIO15  // Sag Sinyal 
