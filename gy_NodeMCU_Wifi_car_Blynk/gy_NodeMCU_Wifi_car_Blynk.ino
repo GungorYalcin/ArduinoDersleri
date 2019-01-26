@@ -1,15 +1,15 @@
 /*
- * gungor 20/01/2019
+ * gungor 26/01/2019
 */
 #define BLYNK_PRINT Serial
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
 
 // You should get Auth Token in the Blynk App.
-char auth[] = "e0430f3213b34c858b64938eac23a410"; //YourToken
+char auth[] = "YourToken"; //YourToken
 // Your WiFi credentials.
-char ssid[] = "Lavender"; //YourNetworkName
-char pass[] = "5335921602"; //YourPassword
+char ssid[] = "YourNetworkName"; //YourNetworkName
+char pass[] = "YourPassword"; //YourPassword
 BlynkTimer timer;
 
 const byte L298N_A_pin = D1; // GPI05
