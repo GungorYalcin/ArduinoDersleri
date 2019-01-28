@@ -3,8 +3,9 @@
 #include <ESP8266WebServer.h>
 #include <ESP8266mDNS.h>
 
-const char* ssid = "lavender";
-const char* password = "5393789681";
+
+const char* ssid = "Lavender";
+const char* password = "5335921602";
 
 ESP8266WebServer server(80);
 
@@ -151,7 +152,6 @@ void handleNotFound() {
  
 
 void setup() {
-   Serial.begin(115200);
   pinMode(L298N_A_In1_pin,OUTPUT);
   pinMode(L298N_A_In2_pin,OUTPUT);
   pinMode(L298N_B_In3_pin,OUTPUT);
@@ -172,7 +172,7 @@ void setup() {
   digitalWrite(Led3_pin,LOW);
   digitalWrite(Led4_pin,LOW);
 
-   
+   Serial.begin(115200);   
    WiFi.mode(WIFI_STA);
    WiFi.begin(ssid, password);
    Serial.println("");
@@ -189,7 +189,7 @@ void setup() {
   server.on("/", handleRoot);
   server.on("/car", handleCar);
 
-server.on("/inline", []() {
+   server.on("/inline", []() {
     server.send(200, "text/plain", "this works as well");
   });
 
