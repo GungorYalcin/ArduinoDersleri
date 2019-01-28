@@ -1,10 +1,8 @@
 #include <ESP8266WiFi.h>
-#include <WiFiClient.h>
 #include <ESP8266WebServer.h>
-#include <ESP8266mDNS.h>
 
-const char* ssid = "lavender";
-const char* password = "5393789681";
+const char* ssid = "Lavender";
+const char* password = "5335921602";
 
 ESP8266WebServer server(80);
 
@@ -168,7 +166,7 @@ void handleNotFound() {
  
 
 void setup() {
-   Serial.begin(115200);
+ 
   pinMode(L298N_A_In1_pin,OUTPUT);
   pinMode(L298N_A_In2_pin,OUTPUT);
   pinMode(L298N_B_In3_pin,OUTPUT);
@@ -188,8 +186,9 @@ void setup() {
   digitalWrite(Led2_pin,LOW);
   digitalWrite(Led3_pin,LOW);
   digitalWrite(Led4_pin,LOW);
-
-   
+  
+ Serial.begin(115200); 
+ 
    WiFi.mode(WIFI_STA);
    WiFi.begin(ssid, password);
    Serial.println("");
